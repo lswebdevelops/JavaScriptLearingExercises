@@ -1,26 +1,20 @@
-let userName =  window.prompt("Type your User name:");
+const select = document.querySelector('select');
+const para = document.querySelector('p');
 
-if(userName == "Admin"){
+select.addEventListener('change', setWeather);
 
-    let adminPassword = window.prompt("Type a password");
+function setWeather() {
+  const choice = select.value;
 
-    if(adminPassword == "TheMaster"){
-        alert("Welcome my Master!");
-    }else if(adminPassword === null){
-        alert("Canceled");
-    }else 
-    {alert("Wrong Password. Try regreshing the page (F5)");}
-
-
-
+  if (choice === 'sunny') {
+    para.textContent = 'It is nice and sunny outside today. Wear shorts! Go to the beach, or the park, and get an ice cream.';
+  } else if (choice === 'rainy') {
+    para.textContent = 'Rain is falling outside; take a rain coat and an umbrella, and don\'t stay out for too long.';
+  } else if (choice === 'snowing') {
+    para.textContent = 'The snow is coming down — it is freezing! Best to stay in with a cup of hot chocolate, or go build a snowman.';
+  } else if (choice === 'overcast') {
+    para.textContent = 'It isn\'t raining, but the sky is grey and gloomy; it could turn any minute, so take a rain coat just in case.';
+  } else {
+    para.textContent = '';
+  }
 }
-else if(userName == null){
- alert("Canceled")
-}
-
-else{
-    alert("I don't know you")
-   }
-
-
-
