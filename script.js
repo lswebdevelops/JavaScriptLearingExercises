@@ -1,8 +1,17 @@
-let age = prompt("age", 18);
+// let realName = prompt("What is the \"official\" name of JavaScript?");
 
-let message = (age < 3)? "hi, Baby!":
-(age <18)?"Hello!":
-(age <100)? "Greetings!":
-"What an unusual age!";
+
+// if(realName == "ECMAScript"){
+//   document.getElementById("p1").innerHTML = "Right!";
+// }else{
+//   document.getElementById("p1").innerHTML = "You don't know ECMAScript?!";
+    
+// }
+
+let realName = prompt("What is the \"official\" name of JavaScript?");
+
+let message =
+(realName == "ECMAScript")? "Right!":
+"You don't know ECMAScript?!";
 
 document.getElementById("p1").innerHTML = message;
