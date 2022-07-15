@@ -1,31 +1,89 @@
-// let realName = prompt("What is the \"official\" name of JavaScript?");
+// // Get number corresponding to the current month, with 0 being January and 11 being December
+// const month = new Date().getMonth();
 
 
-// if(realName == "ECMAScript"){
-//   document.getElementById("p1").innerHTML = "Right!";
-// }else{
-//   document.getElementById("p1").innerHTML = "You don't know ECMAScript?!";
-    
-// }
+function getMonth(){
+const month = new Date().getMonth();
+let monthStr = "";
+if(month == 0){
+  monthStr = "Jan";
+  }
 
-// let realName = prompt("What is the \"official\" name of JavaScript?");
+else if (month == 1){
+  monthStr = "Fev";
+  }
 
-// let message =
-// (realName == "ECMAScript")? "Right!":
-// "You don't know ECMAScript?!";
+ else if(month == 2){
+  monthStr = "Mar";
+  }
+else if (month == 3){
+  monthStr = "Apr";
+  }
 
-// document.getElementById("p1").innerHTML = message;
 
-let realName = prompt("What is the \"official\" name of JavaScript?", "ECMAScript");
-
-switch(realName){
-    case  "ECMAScript":
-      document.getElementById("p1").innerHTML = "Right!";
-    break;
-    case "me":
-      document.getElementById("p1").innerHTML = "You gotta be kitting me!";
-    break;
- default:
-  document.getElementById("p1").innerHTML = "You don't know ECMAScript? What a shame!";
+else if  (month == 4){
+  monthStr = "May";
+  }
+  
+ else  if(month == 5){
+  monthStr = "Jun";
+  }
+  else  if(month == 6){
+    monthStr = "Jul";
+    }
+    else  if(month == 7){
+      monthStr = "Aug";
+      }
+      else  if(month == 8){
+        monthStr = "Sep";
+        }
+        else  if(month == 9){
+          monthStr = "Oct";
+          }
+          else  if(month == 10){
+            monthStr = "Nov";
+            }
+else{
+  monthStr = "Dec"
 }
+
+
+switch (monthStr) {
+	// January, February, March
+	case "Jan":
+	case "Fev":
+	case "Mar":
+		document.getElementById("p1").innerHTML = ("Winter");
+		break;
+	// April, May, June
+	case "Apr":
+	case "May":
+	case "Jun":
+    document.getElementById("p1").innerHTML = ("Spring");
+		break;
+	// July, August, September
+	case "Jul":
+	case "Aug":
+	case "Sep":
+    document.getElementById("p1").innerHTML = ("Summer");
+		break;
+	// October, November, December
+	case "Oct":
+	case "Nov":
+	case "Dec":
+    document.getElementById("p1").innerHTML = ("Autumn");
+		break;
+	default:
+    document.getElementById("p1").innerHTML = ("Something went wrong.");
+}
+let dayOfMonth = new Date().getDate();
+
+document.getElementById("p001").innerHTML = `It's `;
+document.getElementById("p01").innerHTML = `.`;
+document.getElementById("p2").innerHTML = ` It's ${monthStr}-${dayOfMonth}.`;
+
+}
+
+
+
 
