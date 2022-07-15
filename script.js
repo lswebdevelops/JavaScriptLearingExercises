@@ -1,21 +1,8 @@
-var num = prompt("Enter whole number");
+let age = prompt("age", 18);
 
-while (num !== parseFloat(num).toString()) {
-    alert("Please enter only numbers!");
-    num = prompt("Enter number");
-}
+let message = (age < 3)? "hi, Baby!":
+(age <18)?"Hello!":
+(age <100)? "Greetings!":
+"What an unusual age!";
 
-if (num > 2015){
-   
-document.getElementById("p1").innerHTML = "two late";
-}
-
-else if (num <2015){
-  document.getElementById("p1").innerHTML = "two soon";
-}
-
-else{
-  document.getElementById("p1").innerHTML = "exactly";
-}
-
-
+document.getElementById("p1").innerHTML = message;
