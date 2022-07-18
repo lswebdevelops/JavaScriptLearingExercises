@@ -1,89 +1,83 @@
-// // Get number corresponding to the current month, with 0 being January and 11 being December
-// const month = new Date().getMonth();
+const dogs = [
+    {name:'Snickers', age:2},
+    {name:'Hugo', age:8},   
+    {name:'Vandy', age:16},
+    {name:'Billy', age:10}
 
+                ];
 
-function getMonth(){
-const month = new Date().getMonth();
-let monthStr = "";
-if(month == 0){
-  monthStr = "Jan";
-  }
-
-else if (month == 1){
-  monthStr = "Fev";
-  }
-
- else if(month == 2){
-  monthStr = "Mar";
-  }
-else if (month == 3){
-  monthStr = "Apr";
-  }
-
-
-else if  (month == 4){
-  monthStr = "May";
-  }
-  
- else  if(month == 5){
-  monthStr = "Jun";
-  }
-  else  if(month == 6){
-    monthStr = "Jul";
-    }
-    else  if(month == 7){
-      monthStr = "Aug";
-      }
-      else  if(month == 8){
-        monthStr = "Sep";
-        }
-        else  if(month == 9){
-          monthStr = "Oct";
-          }
-          else  if(month == 10){
-            monthStr = "Nov";
-            }
-else{
-  monthStr = "Dec"
+function makeGreen(){
+    const p = document.querySelector("p");
+    p.style.color ='green';
+    p.style.fontSize ='50px';
 }
 
+//relular
+console.log("hello");
+// Interpolate
+console.log('hi I am a %s string', '⌚');
 
-switch (monthStr) {
-	// January, February, March
-	case "Jan":
-	case "Fev":
-	case "Mar":
-		document.getElementById("p1").innerHTML = ("Winter");
-		break;
-	// April, May, June
-	case "Apr":
-	case "May":
-	case "Jun":
-    document.getElementById("p1").innerHTML = ("Spring");
-		break;
-	// July, August, September
-	case "Jul":
-	case "Aug":
-	case "Sep":
-    document.getElementById("p1").innerHTML = ("Summer");
-		break;
-	// October, November, December
-	case "Oct":
-	case "Nov":
-	case "Dec":
-    document.getElementById("p1").innerHTML = ("Autumn");
-		break;
-	default:
-    document.getElementById("p1").innerHTML = ("Something went wrong.");
-}
-let dayOfMonth = new Date().getDate();
+//styled
+console.log('%c I am some great text', 'font-size:20px; background:red; text-shadow: 10px 10px 0 blue');
 
-document.getElementById("p001").innerHTML = `It's `;
-document.getElementById("p01").innerHTML = `.`;
-document.getElementById("p2").innerHTML = ` It's ${monthStr}-${dayOfMonth}.`;
+//warning
 
-}
+console.warn('oh noooo!');
+//info
+console.info('oh noooo! The croks are eating people');
 
+//testing
 
+console.assert(1===2, 'you did not select the right Element');
 
+let p = document.querySelector('p');
+console.assert(p.classList.contains('_ouch'), 'That is wrong');
 
+//clearing
+console.clear();
+//viewing DOM elements
+
+// console.log(p);
+console.dir(p);
+console.log(dogs)
+console.dir(dogs)
+console.clear();
+
+//grouping togheter
+
+dogs.forEach(dog =>{
+    // console.group('${dog.name}');
+    console.groupCollapsed(`${dog.name}`);
+
+    console.log(`This is  ${dog.name}`);
+    console.log(`${dog.name} is  ${dog.age} years old`);
+    console.log(`${dog.name} is  ${dog.age * 7} dog-years old`);
+    console.groupEnd(`${dog.name}`);
+
+});
+//count
+
+console.count('wes');
+console.count('wes');
+
+console.count('wes');
+
+console.count('wes');
+
+console.count('wes');
+
+// console.clear();
+
+//timing
+
+console.time('taking data');
+fetch('https://api.github.com/users/lswebdevelops')
+.then(data => data.json())
+    .then(data =>{
+        console.timeEnd('taking data');
+        console.log(data);
+    
+});
+// console.clear();
+
+console.table(dogs);
