@@ -1,9 +1,10 @@
-const fruits = ["Banana", "Orange", "Apple"];
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
 
-document.getElementById('demo').innerHTML = fruits;
-
-function addNewFruit(){
-fruits[fruits.length] = prompt("type a fruit");
 document.getElementById("demo").innerHTML = fruits;
-
+function addDivisor(){
+  let test =prompt("what is the divisor? ", ", ");
+  document.getElementById("demo2").innerHTML = fruits.join(test);
 }
+
+console.log(fruits)
+
