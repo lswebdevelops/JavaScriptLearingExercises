@@ -1,21 +1,29 @@
+const contacts = ['Luciano:99655324', 'Adiles:96532324', 'Daiana:93922423', 'Renato:9998769', 'Davi:9384975'];
 
-const cars = ["corsa", 'clio', 'omega'];
+const param = document.querySelector('p');
+const input = document.querySelector('input');
+const btn = document.querySelector('button');
 
+btn.addEventListener('click', () =>{
 
+  const searchName = input.value.toLowerCase();
 
+  input.value = "";
+  input.focus();
 
-let myFavoriteCars = "Those were once my cars: ";
+  param.textContent= "";
+  for(const contact of contacts){
+    const splitContact = contact.split(":");
+    if(splitContact[0].toLowerCase() === searchName){
+      param.textContent = splitContact[0] + '\'s number is ' + splitContact[1] +
+      ".";
+      break;
+    }
 
-for (let i=0; i < cars.length; i++){
-
-  if(i === cars.length -1){
-
-    myFavoriteCars += `and ${cars[i]}.`;
-
-  }else{
-myFavoriteCars += `${cars[i]}, `
   }
-
+if(param.textContent === ''){
+  param.textContent = 'Contact not found.';
 }
 
-document.getElementById('p').innerHTML = myFavoriteCars;
+})
+
