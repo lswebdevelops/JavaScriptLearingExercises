@@ -1,18 +1,4 @@
 body{
-    background-color: turquoise;
+  background-color: #333;
+color: wheat;
 }
-
-      html {
-        font-family: sans-serif;
-      }
-      body {
-        width: 50%;
-        max-width: 800px;
-        min-width: 480px;
-        margin: 0 auto;
-      }
-      .lastResult {
-        color: white;
-        padding: 3px;
-      }
-   
