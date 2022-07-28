@@ -1,17 +1,19 @@
-const para = document.querySelector('p');
-const input = document.querySelector('input');
-const btn = document.querySelector('button');
+const cats = ['Pete', 'Biggles', 'Jasmine'];
 
-btn.addEventListener('click', () => {
-  para.textContent = 'Output: ';
-  const num = input.value;
-  input.value = '';
-  input.focus();
-  for (let i = 1; i <= num; i++) {
-    let sqRoot = Math.sqrt(i);
-    if (Math.floor(sqRoot) !== sqRoot) {
-      continue;
-    }
-    para.textContent += `${i} `;
+let myFavoriteCats = 'My cats are called ';
+
+let i = 0;
+
+while (i < cats.length) {
+  if (i === cats.length - 1) {
+    myFavoriteCats += `and ${cats[i]}.`;
+  } else {
+    myFavoriteCats += `${cats[i]}, `;
   }
-});
+
+  i++;
+}
+
+
+document.getElementById('p').innerHTML = myFavoriteCats;
+// "My cats are called Pete, Biggles, and Jasmine."
