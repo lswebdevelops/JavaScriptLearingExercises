@@ -1,39 +1,27 @@
-let count = 0;
+// const myObj = {
+//   prop1: "val1",
+//   prop2: "val2"
+// };
 
-function cc(card) {
-  // Only change code below this line
-
- let result = "";
-
-switch(card){
- 
-case 2:
- case 3:
- case 4:
-case 5:
-case 6:
-count ++;
-break;
-
-case 10:
-case 'J':
-case 'Q':
-case 'K':
-case 'A':
-count --;
-break;
-}
-
-if(count > 0){
-result = `${count} Bet`;
-}else{
-  result = `${count} Hold`;
-}
-  return result;
-  // Only change code above this line
-}
+// const prop1val = myObj.prop1;
+// const prop2val = myObj.prop2;
 
 
-//  cc(3); cc(7); cc('K'); cc('A');
+// document.querySelector('#p1').innerHTML =prop1val;
+// document.querySelector('#p2').innerHTML =prop2val;
 
-document.querySelector('#p1').innerHTML = cc('Q');
+
+const myObj = {
+  "Space Name": "Kirk",
+  "More Space": "Spock",
+  "NoSpace": "USS Enterprise"
+};
+
+document.querySelector('#p1').innerHTML = myObj["Space Name"];
+document.querySelector('#p2').innerHTML = myObj['More Space'];
+document.querySelector('#p3').innerHTML = myObj["NoSpace"];
+document.querySelector('section').innerHTML = "🖖";
+
+
+
+
