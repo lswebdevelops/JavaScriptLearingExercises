@@ -1,26 +1,22 @@
-// const myObj = {
-//   prop1: "val1",
-//   prop2: "val2"
-// };
-
-// const prop1val = myObj.prop1;
-// const prop2val = myObj.prop2;
-
-
-// document.querySelector('#p1').innerHTML =prop1val;
-// document.querySelector('#p2').innerHTML =prop2val;
-
-
-const myObj = {
-  "Space Name": "Kirk",
-  "More Space": "Spock",
-  "NoSpace": "USS Enterprise"
+const ourDog = {
+  "name": "Camper",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["Me", "Adiles"]
 };
+ourDog.name = "Vandy";
+ourDog["friends"] = ["Me","Adiles", "Davi"]
 
-document.querySelector('#p1').innerHTML = myObj["Space Name"];
-document.querySelector('#p2').innerHTML = myObj['More Space'];
-document.querySelector('#p3').innerHTML = myObj["NoSpace"];
-document.querySelector('section').innerHTML = "🖖";
+let yourDog = ourDog["legs"];
+
+document.querySelector('#p1').innerHTML = `Your dog ${ourDog["name"]} has ${yourDog} legs` 
+  + (document.querySelector('section').innerHTML) ;
+
+document.querySelector('#p2').innerHTML = ourDog.friends[2]
+
+ document.querySelector('#p3').innerHTML = ourDog.friends[1];
+
+
 
 
 
