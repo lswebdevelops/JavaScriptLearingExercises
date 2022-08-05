@@ -1,47 +1,26 @@
 
+function caseInSwitch(val) {
 
+    let lowercaseLetter = val;
+    switch (lowercaseLetter) {
+        case "a":
+            document.querySelector('#p2').innerHTML=   "A";
+          break;
+        case "b":
+            document.querySelector('#p2').innerHTML=   "B";
 
-const cats = ['Pete', 'Biggles', 'Jasmine'];
-let myFavoriteCats = 'My cats are called ';
-let i = 0;
+          break;
+          default:
+            document.querySelector('#p2').innerHTML=   "no value provided";
 
-do {
-    if (i === cats.length - 1) {
-        myFavoriteCats += `and ${cats[i]}.`;
-    } else {
-        myFavoriteCats += `${cats[i]}, `;
-    }
-    i++;
-}
-while (i < cats.length);
-
-
-const selectors = document.querySelectorAll('p');
-
-for(let i= 0; i <= selectors.length; i ++){
-    selectors[0].innerHTML = myFavoriteCats;
-   selectors[1].innerHTML = myFavoriteCats;
-   selectors[2].innerHTML = myFavoriteCats;
-}
+      }
+  }
+  caseInSwitch("b");
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+  
+  
+ 
