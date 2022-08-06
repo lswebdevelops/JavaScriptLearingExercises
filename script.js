@@ -1,20 +1,45 @@
-const ourDog = {
-  "name": "Camper",
-  "legs": 4,
-  "tails": 1,
-  "friends": ["Me", "Adiles"]
-};
-ourDog.name = "Vandy";
-ourDog["friends"] = ["Me","Adiles", "Davi"]
+// Setup
+function phoneticLookup(val) {
+  let result = "";
+  // Only change code below this line
 
-let yourDog = ourDog["legs"];
 
-document.querySelector('#p1').innerHTML = `Your dog ${ourDog["name"]} has ${yourDog} legs` 
-  + (document.querySelector('section').innerHTML) ;
+ let lookup= {
+     "alpha": "Adams",
+     "bravo": "Boston",
+      "charlie": "Chicago",
+     "delta": "Denver",
+      "echo": "Easy",
+      "foxtrot": "Frank"
+  };
+  // switch(val) {
+  //   case "alpha":
+  //     result = "Adams";
+  //     break;
+  //   case "bravo":
+  //     result = "Boston";
+  //     break;
+  //   case "charlie":
+  //     result = "Chicago";
+  //     break;
+  //   case "delta":
+  //     result = "Denver";
+  //     break;
+  //   case "echo":
+  //     result = "Easy";
+  //     break;
+  //   case "foxtrot":
+  //     result = "Frank";
+  // }
+result = lookup[val];
+  // Only change code above this line
+  return result;
+}
 
-document.querySelector('#p2').innerHTML = ourDog.friends[2]
 
- document.querySelector('#p3').innerHTML = ourDog.friends[1];
+document.querySelector('#p2').innerHTML = phoneticLookup("alpha") 
+
+//  document.querySelector('#p3').innerHTML = lastLetter;
 
 
 
