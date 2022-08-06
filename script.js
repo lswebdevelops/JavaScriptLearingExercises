@@ -1,20 +1,29 @@
-function testObj(obj, checkProp){
-
-
-  if(obj.hasOwnProperty(checkProp)){
-    return obj[checkProp];
+const myPlants = [
+  {
+    type: "flowers",
+    list: [
+      "rose",
+      "tulip",
+      "dandelion"
+    ]
+  },
+  {
+    type: "trees",
+    list: [
+      "fir",
+      "pine",
+      "birch"
+    ]
   }
-return "Not found";
-}
+];
+
+const secondTree = myPlants[1].list[1];
 
 
+ 
+ document.querySelector('#p1').innerHTML = secondTree;
+// document.querySelector('#p2').innerHTML = ourPets[1].names[0];
 
-const myObj = {
-  top: "hat",
-  bottom: "pants"
-};
-
- document.querySelector('#p3').innerHTML = testObj(myObj , 'bottom');
 
 
 
