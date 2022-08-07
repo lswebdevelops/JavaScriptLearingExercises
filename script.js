@@ -1,46 +1,16 @@
-// Setup
-const recordCollection = {
-  2548: {
-    albumTitle: 'Slippery When Wet',
-    artist: 'Bon Jovi',
-    tracks: ['Let It Rock', 'You Give Love a Bad Name']
-  },
-  2468: {
-    albumTitle: '1999',
-    artist: 'Prince',
-    tracks: ['1999', 'Little Red Corvette']
-  },
-  1245: {
-    artist: 'Robert Palmer',
-    tracks: []
-  },
-  5439: {
-    albumTitle: 'ABBA Gold'
-  }
-};
+const someAdjective = "smart";
+let myStr = "Learning to code is ";
+myStr += someAdjective;
 
-// Only change code below this line
-function updateRecords(records, id, prop, value) {
-// If prop isn't tracks and value isn't an empty string, update or set that album's prop to value.
-if(prop !==  'tracks' && value !== ""){
-   records[id][prop]= value;
-}
-// If prop is tracks but the album doesn't have a tracks property, create an empty array and add value to it.
-else if(prop ===  'tracks' &&  records[id].hasOwnProperty('tracks') === false){
-  records[id][prop] = [value];
-}
-// If prop is tracks and value isn't an empty string, add value to the end of the album's existing tracks array.
-else if(prop ===  'tracks' && value !== ""){
-  records[id][prop].push(value);
-}
-// If value is an empty string, delete the given prop property from the album.
-else if(value === ""){
-  delete  records[id][prop];
-}
+document.querySelector("#p1").innerHTML = someAdjective;
+document.querySelector("#p2").innerHTML = myStr;
 
+// Change code below this line
+console.log(myStr.length)
+console.log("Learning to code is ".length)
 
-  return records;
-}
-// Note: A copy of the recordCollection object is used for the tests.
-console.log(updateRecords(recordCollection, 5439, 'artist', 'ABBA'));
+let lastLetterOfAdj = someAdjective[someAdjective.length -1]
+console.log(lastLetterOfAdj)
 
+let secondlastLetterOfAdj = "";
+console.log( secondlastLetterOfAdj = someAdjective[someAdjective.length -2])
