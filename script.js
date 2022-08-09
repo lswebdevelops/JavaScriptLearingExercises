@@ -1,91 +1,55 @@
+// let array = [13,20,30];
+// let n = array.length;
 
 
- let a = prompt("give me a number", 3);
- let b = prompt("give me a number", 5);
-
-// function findGreater(a, b) {
-//   if(a > b) {
-//     return "a is greater";
+// function sum(arr, n) {
+//   let sum = 0;
+//   for (let i = 0; i < n; i++) {
+//     sum  += arr[i];
 //   }
-//   else {
-//     return "b is greater or equal";
-//   }
+//   return sum;
 // }
 
+// console.log(sum(array,n));
 
 
-
-// function findGreaters(a, b) {
-//   return a > b ? "a is greater" : "b is greater or equal";
-// }
+// // now a recursive function 
 
 
-
-// console.log(findGreater(a,b))
-
-// console.log(findGreaters(a,b))
-
-
-
-// // */************* */
-
-
-// function checkEqual(a, b) {
-//   return a === b? "Equal": "Not Equal"
+// function sum2(arr, n) {
+//   if (n <= 0) {
+//     return 0;
+//   } else {
+//     return sum2(arr, n - 1) + arr[n - 1];
 //   }
-  
-//  console.log( checkEqual(1, 2))
+// }
+//   console.log(sum2(array,n));
 
 
-function findGreaterOrEqual(a, b) {
-  if (a === b) {
-    return "a and b are equal";
-  }
-  else if (a > b) {
-    return "a is greater";
-  }
-  else {
-    return "b is greater";
+function countup(n) {
+  if (n < 1) {
+    return [];
+  } else {
+    const countArray = countup(n - 1);
+    countArray.push(n);
+    return countArray;
   }
 }
 
-console.log(findGreaterOrEqual(a,b))
+console.log(countup(5));
 
 
-function findGreaterThan(a, b ){
-  return a === b ? "a is igual to b": a > b ? "a is greater than b" : "b is greater than a"
-}
-
-console.log(findGreaterThan(a,b))
-
-function checkSign(num) {
-  let numInt = parseInt(num);
-  return numInt === 0 ? "zero" : numInt > 0 ? "positive" :  "negative";
-  
+// Only change code below this line
+function countdown(n){
+  if (n < 1) {
+   return [];
+    
+  } else {
+    const countArray = countdown(n - 1);
+    countArray.unshift(n);
+    return countArray;
   }
-  
-  console.log(checkSign(a))
+}
+// Only change code above this line
 
-  console.log(`a is: ${a} and b is ${b}`)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(countdown(10))
