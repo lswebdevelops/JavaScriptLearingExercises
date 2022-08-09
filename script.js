@@ -1,20 +1,10 @@
-// function randomFraction() {
+let binaryNumber = prompt("Type binary number:", "1010001001");
+function convertToInteger(str) {
 
-//   // Only change code below this line
-
-//   return Math.floor(Math.random() * 20);
-
-//   // Only change code above this line
-// }
-
-// console.log(randomFraction()  )
-
-
-function randomRange(myMin, myMax) {
-  // Only change code below this line
-  
-  return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
-
-  // Only change code above this line
+  let convertedInt = parseInt(binaryNumber, 2);
+  return convertedInt;
 }
-console.log(randomRange(0, 20));
+
+let number = convertToInteger("1001");
+ console.log(`Binary Number: ${binaryNumber}`);
+console.log(`Decimal Number: ${number}`);
