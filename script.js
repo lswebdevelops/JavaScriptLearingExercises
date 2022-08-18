@@ -1,3 +1,14 @@
+//html
+
+const htmlContainer = document.querySelector('html');
+  htmlContainer.style.backgroundColor = "#333"
+htmlContainer.style.padding = "0"
+//body
+const bodyContainer = document.querySelector('body');
+bodyContainer.style.backgroundColor = "rgb(155,155,155";
+bodyContainer.style.padding = "96px 12pt 1in 2pc"
+
+
 // your JavaScript file
 const containerDiv = document.querySelector('#container');
 
