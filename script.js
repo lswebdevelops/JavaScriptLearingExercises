@@ -9,59 +9,32 @@ bodyContainer.style.backgroundColor = "rgb(155,155,155";
 bodyContainer.style.padding = "96px 12pt 1in 2pc"
 
 
-// your JavaScript file
-const containerDiv = document.querySelector('#container');
+// button
+const btnContainer = document.querySelector("#btn");
 
-const content = document.createElement('div');
-content.classList.add('content');
-content.textContent = 'This is the glorious new text-content!';
+btnContainer.style.width = "85px"
+btnContainer.style.borderRadius = "5px"
+btnContainer.style.border = "1px solid grey"
+btnContainer.style.backgroundColor = "green"
+btnContainer.style.height = "35px"
 
-containerDiv.appendChild(content);
+//adding functions the the btn
+btnContainer.onclick = () => alert("Hello World!");
 
+//btn2
+// the JavaScript file
+const btn2 = document.querySelector('#btn2');
+btn2.addEventListener('click', () => {
+  alert("Hello World");
+});
+btn2.style.backgroundColor = "green";
+btn2.style.width = "85px"
+btn2.style.height = "35px"
+btn2.style.borderRadius = "5px"
+btn2.style.border = "1px solid grey"
 
-// a <p> with red text that says “Hey I’m red!”
-
-
-
-const contentPara = document.createElement('p');
-
-contentPara.classList.add('contentPara');
-contentPara.textContent= "Hey I’m red!";
-containerDiv.appendChild(contentPara);
-contentPara.style.color = "red";
-
-
-// an <h3> with blue text that says “I’m a blue h3!”
-
-const contentH3 = document.createElement('h3');
-
-contentH3.classList.add('contentH3');
-contentH3.textContent= "I'm a blue h3!";
-containerDiv.appendChild(contentH3);
-contentH3.style.color = "blue";
-
-// a <div> with a black border and pink background color with the following elements inside of it:
-
-const contentDiv = document.createElement('div');
-contentDiv.classList.add('containerDiv2');
-// contentDiv.textContent= "div2";
-container.appendChild(contentDiv);
-contentDiv.style.backgroundColor = "pink";
-contentDiv.style.border = "solid black 1px";
-
-// another <h1> that says “I’m in a div”
-const containerDiv2 = document.querySelector('.containerDiv2');
-
-const contentH1 = document.createElement('h1');
-
-contentH1.classList.add('contentH1');
-contentH1.textContent= "I’m in a div";
-containerDiv2.appendChild(contentH1);
-
-/* <p>  “ME TOO!”       <p></p> */
-const contentP = document.createElement('p');
-
-contentP.classList.add('contentP');
-contentP.textContent= "Mee too";
-containerDiv2.appendChild(contentP);
-
+btn0.style.backgroundColor = "green";
+btn0.style.width = "85px"
+btn0.style.height = "35px"
+btn0.style.borderRadius = "5px"
+btn0.style.border = "1px solid grey"
