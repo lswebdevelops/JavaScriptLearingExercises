@@ -1,7 +1,21 @@
-body, html{
-  background-color: white;
-  padding: 15px;
-  margin: 0;
-color: black;
-text-align: center;
+
+
+div {
+  width: 100%;
+  padding: 100px;
+}
+
+.one{
+  background-color: thistle;
+}
+.two{
+  background-color: mistyrose;
+}
+
+.three{
+  background-color: coral;
+}
+
+.bod{
+  background-color: turquoise;
 }
