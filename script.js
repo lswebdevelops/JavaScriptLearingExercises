@@ -1,17 +1,10 @@
-const divs = document.querySelectorAll('div');
+let paragraphs = document.getElementsByTagName('p');
+console.log(paragraphs[0]);
+console.log(paragraphs[1]);
+console.log(paragraphs[2]);
 
-function logText(e) {
-  console.log(this.classList.value)
-  // e.stopProgagation();// stop bubbling
-  // console.log(this)
-}
-
-
-
-
-divs.forEach(div => div.addEventListener('click', logText, {
-  capture: false, 
-  once: true
-  
-}));
+document.body.insertBefore(paragraphs[2], paragraphs[0]);
+console.log(paragraphs[0]);
+console.log(paragraphs[1]);
+console.log(paragraphs[2]);
 
