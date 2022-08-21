@@ -1,7 +1,13 @@
-const x = document.forms['frm1']
-console.log(x);
-let text = '';
-for(let i = 0; i <x.length; i++){
-  text += x.elements[i].value + "<br>";
+
+
+function validateForm(){
+
+let form = document.forms["myForm"]['fname'].value;
+if(form == ""){
+  document.write("Please give name! Press 'F5' and try again.")
+return false;
 }
-document.getElementById('demo').innerHTML = text;
+
+
+}
+
