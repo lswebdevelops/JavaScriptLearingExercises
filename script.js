@@ -1,11 +1,4 @@
 
-
-
-
-
-
-
-
 //query selector all.
 
 
