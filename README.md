@@ -1,2 +1,2 @@
 # JavaScriptLearingExercises
-Just some JavaScript exescises
+Just some JavaScript exercises
