@@ -19,3 +19,8 @@ div {
 .bod{
   background-color: turquoise;
 }
+
+html{
+  font-weight: bolder;
+  color: red;
+}

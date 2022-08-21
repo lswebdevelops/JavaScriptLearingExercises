@@ -1,10 +1,7 @@
-let paragraphs = document.getElementsByTagName('p');
-console.log(paragraphs[0]);
-console.log(paragraphs[1]);
-console.log(paragraphs[2]);
-
-document.body.insertBefore(paragraphs[2], paragraphs[0]);
-console.log(paragraphs[0]);
-console.log(paragraphs[1]);
-console.log(paragraphs[2]);
-
+const x = document.forms['frm1']
+console.log(x);
+let text = '';
+for(let i = 0; i <x.length; i++){
+  text += x.elements[i].value + "<br>";
+}
+document.getElementById('demo').innerHTML = text;
