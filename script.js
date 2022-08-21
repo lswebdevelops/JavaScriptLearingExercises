@@ -37,7 +37,22 @@
 // get element by class name//
 
 
-let items= document.getElementsByClassName('list-group-item');
+// let items= document.getElementsByClassName('list-group-item');
+// console.log(items);
+// console.log(items[3]);
+// items[2].style.display = 'none'
+// items[3].style.color = 'blue'
+// items[1].style.border = 'solid 1px black'
+// items[0].style.background = '#333'
+// items[4].style.padding = '13px';
+
+// for(var i = 0; i <items.length; i++){
+//   items[i].style.background = '#333'
+// }
+
+//get elements by tagName
+
+let items= document.getElementsByTagName('li');
 console.log(items);
 console.log(items[3]);
 items[2].style.display = 'none'
@@ -49,7 +64,6 @@ items[4].style.padding = '13px';
 for(var i = 0; i <items.length; i++){
   items[i].style.background = '#333'
 }
-
 
 
 
