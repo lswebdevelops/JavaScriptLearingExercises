@@ -50,20 +50,52 @@
 //   items[i].style.background = '#333'
 // }
 
-//get elements by tagName
+// //get elements by tagName
 
-let items= document.getElementsByTagName('li');
-console.log(items);
-console.log(items[3]);
-items[2].style.display = 'none'
-items[3].style.color = 'blue'
-items[1].style.border = 'solid 1px black'
-items[0].style.background = '#333'
-items[4].style.padding = '13px';
+// let items= document.getElementsByTagName('li');
+// console.log(items);
+// console.log(items[3]);
+// items[2].style.display = 'none'
+// items[3].style.color = 'blue'
+// items[1].style.border = 'solid 1px black'
+// items[0].style.background = '#333'
+// items[4].style.padding = '13px';
 
-for(var i = 0; i <items.length; i++){
-  items[i].style.background = '#333'
-}
+// for(var i = 0; i <items.length; i++){
+//   items[i].style.background = '#333'
+// }
+
+
+//query selectors. 
+
+let header = document.querySelector('li');
+header.textContent = "testing queryselector"
+header.style.borderBottom = "solid 3px #333";
+
+let input = document.querySelector('input');
+input.value = "word";
+
+let submit = document.querySelector('input[type="submit"]')
+submit.value="send"
+
+// using css lastchild
+
+let item = document.querySelector('.list-group-item');
+item.style.color = "yellow"
+item.style.background = "red"
+
+
+// let lastItem = document.querySelector('.list-group-item:last-child')
+// console.log(lastItem);
+
+// lastItem.style.color = 'blue';// it brings an error.
+
+// let secondChild = document.querySelector('.list-group-item:nthchild(2)')
+// console.log(secondChild);
+
+// secondChild.style.color = 'blue';// it brings an error.
+
+
 
 
 
