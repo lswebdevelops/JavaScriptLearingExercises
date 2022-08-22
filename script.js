@@ -16,9 +16,18 @@ box.addEventListener('mousemove', runEvent);
 
 function runEvent(e){
     console.log('Event type: ' + e.type);
+    let r = e.offsetX 
+    let g = e.offsetY
+    let b = (e.offsetX + e.offsetY) /2;
     // box.style.background = 'black'
     // box.style.color = 'white'
 output.innerHTML = '<h3>Mousex: '+e.offsetX+'</h3><h3>MouseY: '+ e.offsetY+'</h3>';
+box.style.backgroundColor= "rgb("+r+","+g+","+b+")";
+//box.style.backgroundColor= "rgb("+e.offsetX +","+e.offsetY+","+b+")"; // could be also like that
+
+console.log(r);
+console.log(g);
+console.log(b);
 }
 // box.addEventListener('mouseleave', runEventoff);
 // box.addEventListener('mouseout', runEventoff);
@@ -31,3 +40,4 @@ output.innerHTML = '<h3>Mousex: '+e.offsetX+'</h3><h3>MouseY: '+ e.offsetY+'</h3
 //     box.style.color = 'red'
 
 // }
+
