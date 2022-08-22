@@ -8,25 +8,26 @@ let box = document.getElementById('box')
 
 
 
-box.addEventListener('mouseenter', runEvent);
+// box.addEventListener('mouseenter', runEvent);
 // box.addEventListener('mouseover', runEvent);
+box.addEventListener('mousemove', runEvent);
 
 
 
 function runEvent(e){
     console.log('Event type: ' + e.type);
-    box.style.background = 'black'
-    box.style.color = 'white'
-
+    // box.style.background = 'black'
+    // box.style.color = 'white'
+output.innerHTML = '<h3>Mousex: '+e.offsetX+'</h3><h3>MouseY: '+ e.offsetY+'</h3>';
 }
-box.addEventListener('mouseleave', runEventoff);
+// box.addEventListener('mouseleave', runEventoff);
 // box.addEventListener('mouseout', runEventoff);
 
 
 
-function runEventoff(e){
-    console.log('Event type: ' + e.type);
-    box.style.background = 'yellow'
-    box.style.color = 'red'
+// function runEventoff(e){
+//     console.log('Event type: ' + e.type);
+//     box.style.background = 'yellow'
+//     box.style.color = 'red'
 
-}
+// }
