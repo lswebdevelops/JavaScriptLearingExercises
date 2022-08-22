@@ -40,6 +40,8 @@
 
 // /new way/ ideal way
 //using a named function
+
+// event object 
 let button = document.getElementById('button').addEventListener('click', buttonClick)
 // function buttonClick(){
 //         console.log('button clicked');
@@ -47,10 +49,24 @@ let button = document.getElementById('button').addEventListener('click', buttonC
 
     //now using the DOM
 
-function buttonClick(){
+function buttonClick(e){
         // console.log('button clicked');
-    document.getElementById('header-title').textContent = "changed";
-    document.querySelector('#main').style.background= '#827e7e';
-    }
+    
+//     console.log(e);
+//  console.log(e.clientX);   
+
+// console.log(e.target.id);
+// console.log(e.target.classList);
+var x  = e.clientX ;//prints the position of the mouse on the screen when clicked
+var y = e.clientY;
+
+var output = document.getElementById('output');
+output.innerHTML = '<h2>'+ x +' \< x y \> '+ y+'</h2>';
+// console.log(e.type);
+console.log(output);
+console.log(e.offsetX);//prints the position of the mouse on the element when clicked
 
 
+console.log(e.altKey);// prints true if alt held
+    
+}
