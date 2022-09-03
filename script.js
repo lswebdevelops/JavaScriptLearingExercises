@@ -1,30 +1,21 @@
-// Write the code to sum all salaries and store in the variable sum. Should be 390 in the example above.
+// Multiply numeric property values by 2
+// importance: 3
+// Create a function multiplyNumeric(obj) that multiplies all numeric property values of obj by 2.
 
-// If salaries is empty, then the result must be 0.
+// For instance:
+// before the call
+let menu = {
+    width: 200,
+    height: 300,
+    title: "My menu"
+};
 
-let salaries = {
-    John: 100,
-    Ann: 160,
-    Pete: 130
+  function multiplyNumeric(menu){
+      for(let key in menu){
+          if(typeof(menu[key]) === 'number'){
+           menu[key]*2;
+                   }
   }
-
-let sum = salaries.John + salaries.Ann + salaries.Pete;
-
-function printSalary(obj){
-  for(let key in obj){
-      return sum;
-  }
-       return 0;
 }
+ console.log(multiplyNumeric(menu));
 
-
-
-console.log(printSalary(salaries));
-console.log(salaries);
-
-delete salaries.John;
-delete salaries.Ann;
-delete salaries.Pete;
-console.log("after object empty:");
-console.log(salaries);
-console.log(printSalary(salaries));
