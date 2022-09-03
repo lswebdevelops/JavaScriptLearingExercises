@@ -6,11 +6,38 @@
 // Change the value of the name to Pete.
 // Remove the property name from the object.
 
-let obj = {};
-obj.name = "John";
+// let obj = {};
+// obj.name = "John";
 
-obj.surname = "Smith";
-obj.name = "Peter";
+// obj.surname = "Smith";
+// obj.name = "Peter";
 
-delete obj.name;
-console.log(obj);
+// delete obj.name;
+// console.log(obj);
+
+
+// Write the function isEmpty(obj) which returns true if the object has no properties, false otherwise.
+
+// Should work like that:
+
+
+
+
+let schedule = {};
+
+
+
+console.log(schedule);
+
+function isEmpty(obj){
+
+for(let key in obj){
+    return false;
+}return true;
+
+}
+
+console.log("It is empty: " + isEmpty(schedule));// true
+schedule["8:30"] = 'get up';
+console.log("It is empty: " + isEmpty(schedule));// false
+
