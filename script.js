@@ -1,33 +1,33 @@
+let person = {
+    name:{
 
-const people = {
-    name: {
-        first:'Bob',
-        last:'Smith',
+     first: "Davi",
+     last: "Sardanha",
     },
+};
+ 
+
+person['name']['last']= 'Hellmann';
+person.age = 1;
+person['name']['first'] = 'Roberto'
+person.age = 87;
+person['eyes']= 'hazel'
+person.farewell = function (){
+    console.log('Bye everybody!');
 }
+console.log(person['eyes']);
+console.log(person.farewell());;
 
-console.log(people.name.first);
-console.log(people.name.last);
-people.name.first = 'Davi'
-people.name.last = 'Sardanha'
-
-console.log(people.name.first);
-console.log(people.name.last);
-console.clear();
-
-// person
-const person = {
-    name: ['Bob', 'Smith'],
-    age: 32
-  }
-  const input = prompt('Get age?', 23)
-person.age = input;
-
-
-const input2 = prompt('Get name', "Davi");
-person.name[0] = input2;
-
-const input3 = prompt('Get surname','Sardanha');
-person.name[1] = input3;
-
-document.getElementById('p1').innerText = `${person.name[0]} ${person.name[1]} is ${person.age} year(s) old.`;
+let years = "";
+function pluralYears(){
+    if(person.age >1){
+         years = 'years'
+    }else{
+        years = 'year'
+    };
+}
+pluralYears()
+console.log(years);
+document.getElementById('p1').innerText = person['name']['first'] + 
+" " + person['name']['last'] + " is " + person.age + " " + years +" old.";
+console.log(person);
