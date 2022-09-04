@@ -1,33 +1,45 @@
-let person = {
-    name:{
 
-     first: "Davi",
-     last: "Sardanha",
-    },
-};
+
+// function createPerson(name){
+//     const obj = {};
+//     obj.name = name;
+//     obj.introduceSelf = function (){
+//         console.log(`Hi! I'm ${this.name}.`);
+//     }
+//     console.log(obj);
+//        return obj;
+// }
+
+
+// const salva= createPerson('Salva');
+
+// salva.name;
+// salva.introduceSelf();
+
+// const frankie= createPerson('Fraunkie');
+// frankie.name;
+// frankie.introduceSelf();
  
+// constructors> the same as above
 
-person['name']['last']= 'Hellmann';
-person.age = 1;
-person['name']['first'] = 'Roberto'
-person.age = 87;
-person['eyes']= 'hazel'
-person.farewell = function (){
-    console.log('Bye everybody!');
-}
-console.log(person['eyes']);
-console.log(person.farewell());;
 
-let years = "";
-function pluralYears(){
-    if(person.age >1){
-         years = 'years'
-    }else{
-        years = 'year'
-    };
+function Person(name){
+				   
+    this.name = name;
+    this.introduceSelf= function(){
+        console.log(`Hi! I'm ${this.name}.`);
+    }
+					 
+				  
 }
-pluralYears()
-console.log(years);
-document.getElementById('p1').innerText = person['name']['first'] + 
-" " + person['name']['last'] + " is " + person.age + " " + years +" old.";
-console.log(person);
+
+//console.log(To call Person() as a constructor, we use new:
+
+const salva= new Person('Salva');
+
+salva.name;
+salva.introduceSelf();
+
+const frankie= new Person('Frankie');
+frankie.name;
+frankie.introduceSelf();
