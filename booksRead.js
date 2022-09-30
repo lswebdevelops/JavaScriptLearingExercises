@@ -6,15 +6,18 @@ function Books(title,autor,  pages, read){
     this.printInfo = function(){
         console.log(`${title} by ${autor}, ${pages} page. Is it read?: ${read}.`)
     }
+    this.info = function(){
+       return `${title} by ${autor}, ${pages} page. Is it read?: ${read}.`
+    }
     
 }
 
 
-const book1 = new Books("The Hobbit", "who actually wrote it", "Probably more than one",true);
-const book2 = new Books("The Boss", "who actually wrote it", "Probably more than one",false);
-const book3 = new Books("The Boys", "who actually wrote it", "Probably more than one",false);
+const theHobbit = new Books("The Hobbit", "who actually wrote it", "probably more than one",true);
+const book2 = new Books("The Boss", "who actually wrote it", "probably more than one",false);
+const book3 = new Books("The Boys", "who actually wrote it", "probably more than one",false);
 
-book1.printInfo();
+console.log(theHobbit.info());
 book2.printInfo();
 book3.printInfo();
 
