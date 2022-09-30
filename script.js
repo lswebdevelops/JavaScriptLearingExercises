@@ -1,45 +1,28 @@
+'use strict';
+
+const input = document.querySelector('#input'), // input/output button
+  numbers = document.querySelectorAll('.numbers div'), // number buttons
+  operators = document.querySelectorAll('.operators div'), // operator buttons
+  result = document.querySelector('#result'), // equal button
+  clear = document.querySelector('#clear'); // clear button
 
 
-// function createPerson(name){
-//     const obj = {};
-//     obj.name = name;
-//     obj.introduceSelf = function (){
-//         console.log(`Hi! I'm ${this.name}.`);
-//     }
-//     console.log(obj);
-//        return obj;
-// }
+let numberInput = []
+
+// document.getElementsByClassName('.numbers div')
+//   .addEventListener('click', function(event){
+//     numberInput.push(event);
+//   });
+
+document.querySelectorAll('.numbers div').forEach(btn => {
+  btn.addEventListener('click', (event) => {
+      numberInput.push(parseInt(event.target.textContent));
+  })
+
+})
 
 
-// const salva= createPerson('Salva');
 
-// salva.name;
-// salva.introduceSelf();
+console.log(numberInput)
 
-// const frankie= createPerson('Fraunkie');
-// frankie.name;
-// frankie.introduceSelf();
- 
-// constructors> the same as above
-
-
-function Person(name){
-				   
-    this.name = name;
-    this.introduceSelf= function(){
-        console.log(`Hi! I'm ${this.name}.`);
-    }
-					 
-				  
-}
-
-//console.log(To call Person() as a constructor, we use new:
-
-const salva= new Person('Salva');
-
-salva.name;
-salva.introduceSelf();
-
-const frankie= new Person('Frankie');
-frankie.name;
-frankie.introduceSelf();
+let resultDisplayed = false; // flag to keep an eye on what output is displayed
