@@ -51,4 +51,20 @@ me.isHuman = true;
 me.printIntroduction();
 
 
+let car = {
+    model: 'Corsa', 
+    maker:'GM',
+    presentCar: function(){
+        console.log(`I have a ${this.model}. It was designed by ${this.maker}.`);
+    }
+}
+
+
+let myCar = Object.create(car);
+
+
+myCar.model = "Punto";
+myCar.make = 'Fiat';
+
+myCar.presentCar();
 
