@@ -34,3 +34,7 @@ const player2 = new Player('alse steve', "O");
 player1.sayName();
 player2.sayMarker();
 
+
+
+console.clear();
+con
