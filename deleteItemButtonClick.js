@@ -1,61 +1,105 @@
-const ul = document.querySelector('.hr');
+//button event listeners for create new book, add new book to page, close popup
+const addBtn = document.querySelector('#addBtn');
+addBtn.addEventListener('click', addBookToLibrary);
 
-//Creating delete button
-function createDeleteButton() {
-  const delButton = document.createElement("button");
-  delButton.classList.add("delete");
-  delButton.type = 'button';
-  delButton.appendChild(document.createTextNode("Delete"));
-  return delButton;
+const newBookBtn = document.querySelector('#newBtn');
+newBookBtn.addEventListener('click', () => popUpForm.style.display = 'block');
+
+const popUpForm = document.getElementById('popUp');
+const closePopUp = document.getElementsByTagName('span')[0];
+closePopUp.addEventListener('click', () => popUpForm.style.display = 'none');
+
+//Book Constructor
+class Book {
+    constructor(title, author, pages, read) {
+        this.title = form.title.value; 
+        this.author = form.author.value; 
+        this.pages = form.pages.value + ' pg'; 
+        this.read = form.read.checked; 
+    }
 }
 
-//Creating read button
-function createReadButton() {
-    const delButton = document.createElement("button");
-    delButton.classList.add("read");
-    delButton.type = 'button';
-    delButton.appendChild(document.createTextNode("Read"));
-    return delButton;
-  }
+//creates book from Book Constructor, adds to library
+let myLibrary = [];
+let newBook;
 
+function addBookToLibrary() {
+    event.preventDefault();
+    popUpForm.style.display = 'none';
 
-
-// event listener that removes list element when button is clicked
-function deleteListElement(event) {
-  const {
-    target: btn
-  } = event; // get the target property from the event object as a local variable btn
-  if (btn.matches('button.delete')) {
-    btn.closest('p').removeChild(btn.parentElement);
-  }
+    newBook = new Book(title, author, pages,read); 
+    myLibrary.push(newBook); 
+    
+    render(); 
+    form.reset();
 }
 
-ul.addEventListener('click', deleteListElement);
+//Creates book visual in browser
+function render() {
+    const display = document.getElementById('Library-container');
+    const books = document.querySelectorAll('.book');
+    books.forEach(book => display.removeChild(book));
+   
+    for (let i=0; i<myLibrary.length; i++){
+        createBook(myLibrary[i]);
+    }
+}
 
-document.getElementById('addListElement').addEventListener('click', function() {
-  const li = document.createElement('stan');
-  // adding a book name
-  const para = document.createElement('p');
-  para.textContent = "The hobbit"
-  // adding an author
-  const para2 = document.createElement('p');
-  para2.textContent ="Writer Name"
-    // adding pages
-    const pages = document.createElement('p');
-  pages.textContent = 333
-  const div = document.createElement('div')
-  const btn = createDeleteButton();
-  const read = createReadButton();
-  div.appendChild(li);
-  div.appendChild(para)
-  div.appendChild(para2)
-  div.appendChild(pages)
-  div.appendChild(btn);
-  div.appendChild(read);
-  ul.appendChild(div);
-  
-})
+//creats book DOM elements, to use in render();
+function createBook(item) {
+    const library = document.querySelector('#Library-container');
+    const bookDiv = document.createElement('div');
+    const titleDiv = document.createElement('div');
+    const authDiv = document.createElement('div');
+    const pageDiv = document.createElement('div');
+    const removeBtn = document.createElement('button');
+    const readBtn = document.createElement('button');
+    
+    
+    bookDiv.classList.add('book');
+    bookDiv.setAttribute('id', myLibrary.indexOf(item));
+
+    titleDiv.textContent = item.title;
+    titleDiv.classList.add('title');
+    bookDiv.appendChild(titleDiv);
+
+    authDiv.textContent = item.author;
+    authDiv.classList.add('author');
+    bookDiv.appendChild(authDiv);
+
+    pageDiv.textContent = item.pages;
+    pageDiv.classList.add('pages');
+    bookDiv.appendChild(pageDiv);
+
+    readBtn.classList.add('readBtn')    
+    bookDiv.appendChild(readBtn);
+    if(item.read===false) {
+        readBtn.textContent = 'Not Read';
+        readBtn.style.backgroundColor = '#e04f63';
+    }else {
+        readBtn.textContent = 'Read';
+        readBtn.style.backgroundColor = '#63da63'
+    }
+
+    removeBtn.textContent = 'Remove'; 
+    removeBtn.setAttribute('id', 'removeBtn');
+    bookDiv.appendChild(removeBtn);
+    
+    library.appendChild(bookDiv);
+
+    removeBtn.addEventListener('click', () => {
+        myLibrary.splice(myLibrary.indexOf(item),1);
+        
+        render();
+    });
+
+    //add toggle ability to each book 'read' button on click
+    readBtn.addEventListener('click', () => { 
+        item.read = !item.read; 
+        
+       
+    }); 
+};
 
 
-
-
+render();
