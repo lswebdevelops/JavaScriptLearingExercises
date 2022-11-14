@@ -27,3 +27,20 @@ const driver = (state) => ({
 })
 
 barker({name: 'karo'}).bark()
+
+const murderRobot = (name) =>{
+    let state ={
+        name, 
+        speed:100,
+        position: 0,
+    }
+    return Object.assign(
+        {},
+        barker(state),
+        driver(state),
+        killer(state),
+    )
+
+}
+
+murderRobot('sniffles').bark()
