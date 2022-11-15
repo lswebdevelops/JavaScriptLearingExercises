@@ -1,3 +1,8 @@
+class ErrorLog {
+    static log(message) {
+        console.log(message);
+    }
+}
 
 class Car {
     constructor(make, model) {
@@ -7,14 +12,10 @@ class Car {
 
     start() {
         if (...) { // Logic to determine whether or not the car should start
-            this.errorLog(`The car ${this.make} ${this.model} started.`);
+            ErrorLog.log(`The car ${this.make} ${this.model} started.`);
             return true;
         }
-        this.errorLog(`The car ${this.make} ${this.model} failed to start.`);
+        ErrorLog.log(`The car ${this.make} ${this.model} failed to start.`);
         return false;
-    }
-
-    errorLog(message) {
-        console.log(message);
     }
 }
