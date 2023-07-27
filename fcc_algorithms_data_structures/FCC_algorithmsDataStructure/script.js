@@ -83,7 +83,6 @@ let array = ["today", "was", "not", "so", "great"];
 array.splice(2, 2);
 console.log(array);
 
-console.clear();
 
 let array3 = ["I", "am", "feeling", "really", "happy"];
 
@@ -99,3 +98,44 @@ arr.splice(1,4)
 // Only change code above this line
 console.log(arr);//[2, 5, 2, 1] = 10 (sum)
 
+
+console.clear();
+
+// Add Items Using splice()
+
+const numbers = [10, 11, 12, 12, 15];
+const startIndex = 3;
+const amountToDelete = 1;
+
+numbers.splice(startIndex, amountToDelete, 13, 14);
+console.log(numbers);
+// startIndex > where to start deleting: 12, 
+// amountToDelete> just one.> 12 
+
+// 13 and 14 are added. 
+const letters = Array.from({ length: 26 }, (_, index) => String.fromCharCode(97 + index));
+
+console.log(letters)// ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+ const startIndexLetters = 12
+ const amountToDeleteLetters = 100;
+ letters.splice(startIndexLetters, amountToDeleteLetters)
+ console.log(letters); // (12) ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l']
+
+ letters.splice(12, 0,'m', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z')
+ console.log(letters);// (26) ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+
+ function htmlColorNames(arr) {
+    // Only change code below this line
+  arr.splice(0,2, 'DarkSalmon','BlanchedAlmond');
+    // Only change code above this line
+    return arr;
+  }
+  console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurquoise', 'FireBrick']));
+  
+  
+  console.clear();
+
+
+
+ 
