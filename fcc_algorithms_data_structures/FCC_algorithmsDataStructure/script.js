@@ -212,10 +212,10 @@ console.clear();
 //   function spreadOut() {
     let fragment = ['to', 'code'];
     let sentence =["learning", ...fragment, 'is', 'fun']; // Change this line
-    let sentence3 = sentence;
-    let sentence2 = ['learning', 'to', 'code', 'is', 'fan']
+    
+    let sentence2 = ['learning', 'to', 'code', 'is', 'fun']
 
-    console.log(sentence3,sentence2);
+    console.log(sentence,sentence2);
     console.log(sentence === sentence2);// false
 
     // return sentence;
@@ -223,3 +223,26 @@ console.clear();
   
 //   console.log(spreadOut());
 
+
+
+
+// Check For The Presence of an Element With indexOf()
+let fruits = ['apples', 'pears', 'oranges', 'peaches', 'pears'];
+// indexOf('dates') returns -1, indexOf('oranges') returns 2, and indexOf('pears') returns 1 (the first index at which each element exists).
+console.log(fruits.indexOf('dates'));;// -1
+console.log(fruits.indexOf('oranges'));;
+console.log(fruits.indexOf('pears'));;
+
+fruits[5] = "bananas"
+console.log(fruits.indexOf("bananas"));;
+console.log(fruits); // (6) ['apples', 'pears', 'oranges', 'peaches', 'pears', 'bananas']
+
+console.clear();
+
+function quickCheck(arr, elem) {
+    // Only change code below this line
+    return arr.indexOf(elem) != -1;
+    // Only change code above this line
+  }
+  
+  console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
