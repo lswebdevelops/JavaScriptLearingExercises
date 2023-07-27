@@ -83,21 +83,18 @@ let array = ["today", "was", "not", "so", "great"];
 array.splice(2, 2);
 console.log(array);
 
-
 let array3 = ["I", "am", "feeling", "really", "happy"];
 
 let newArray = array3.splice(2, 1);
 console.log(array3); // ['I', 'am', 'really', 'happy']
 console.log(newArray); // feeling
 
-
 const arr = [2, 4, 5, 1, 7, 5, 2, 1];
 // Only change code below this line
-arr.splice(1,4)
+arr.splice(1, 4);
 
 // Only change code above this line
-console.log(arr);//[2, 5, 2, 1] = 10 (sum)
-
+console.log(arr); //[2, 5, 2, 1] = 10 (sum)
 
 console.clear();
 
@@ -109,49 +106,120 @@ const amountToDelete = 1;
 
 numbers.splice(startIndex, amountToDelete, 13, 14);
 console.log(numbers);
-// startIndex > where to start deleting: 12, 
-// amountToDelete> just one.> 12 
+// startIndex > where to start deleting: 12,
+// amountToDelete> just one.> 12
 
-// 13 and 14 are added. 
-const letters = Array.from({ length: 26 }, (_, index) => String.fromCharCode(97 + index));
+// 13 and 14 are added.
+const letters = Array.from({ length: 26 }, (_, index) =>
+  String.fromCharCode(97 + index)
+);
 
-console.log(letters)// ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
- const startIndexLetters = 12
- const amountToDeleteLetters = 100;
- letters.splice(startIndexLetters, amountToDeleteLetters)
- console.log(letters); // (12) ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l']
+console.log(letters); // ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+const startIndexLetters = 12;
+const amountToDeleteLetters = 100;
+letters.splice(startIndexLetters, amountToDeleteLetters);
+console.log(letters); // (12) ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l']
 
- letters.splice(12, 0,'m', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z')
- console.log(letters);// (26) ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+letters.splice(
+  12,
+  0,
+  "m",
+  "n",
+  "o",
+  "p",
+  "q",
+  "r",
+  "s",
+  "t",
+  "u",
+  "v",
+  "w",
+  "x",
+  "y",
+  "z"
+);
+console.log(letters); // (26) ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
-
- function htmlColorNames(arr) {
-    // Only change code below this line
-  arr.splice(0,2, 'DarkSalmon','BlanchedAlmond');
-    // Only change code above this line
-    return arr;
-  }
-  console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurquoise', 'FireBrick']));
-  
-  
-  
-  //   Copy Array Items Using slice()
-  
-  
-  let weatherConditions = ['rain', 'snow', 'sleet', 'hail', 'clear'];
-  
-  let todaysWeather = weatherConditions.slice(1,3);
-  console.log(weatherConditions);
-  console.log(todaysWeather);
-  
-  console.clear();
-
-let fCast = ['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']
- function forecast(arr) {
-    // Only change code below this line
-    arr = arr.slice(2,4)
-    return arr;
-  }
-  
+function htmlColorNames(arr) {
+  // Only change code below this line
+  arr.splice(0, 2, "DarkSalmon", "BlanchedAlmond");
   // Only change code above this line
-  console.log(forecast(fCast));
+  return arr;
+}
+console.log(
+  htmlColorNames([
+    "DarkGoldenRod",
+    "WhiteSmoke",
+    "LavenderBlush",
+    "PaleTurquoise",
+    "FireBrick",
+  ])
+);
+
+//   Copy Array Items Using slice()
+
+let weatherConditions = ["rain", "snow", "sleet", "hail", "clear"];
+
+let todaysWeather = weatherConditions.slice(1, 3);
+console.log(weatherConditions);
+console.log(todaysWeather);
+
+let fCast = ["cold", "rainy", "warm", "sunny", "cool", "thunderstorms"];
+function forecast(arr) {
+  // Only change code below this line
+  arr = arr.slice(2, 4);
+  return arr;
+}
+
+// Only change code above this line
+console.log(forecast(fCast));
+
+// */*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/
+// Copy an Array with the Spread Operator 
+
+let thisArray = [true, true, undefined, false, null];
+let thatArray = [...thisArray];
+let myArray = thisArray;
+console.log(typeof thatArray); //object
+console.log(typeof myArray); //object
+
+
+
+
+function copyMachine(arr, num) {
+    let newArr = [];
+    while (num >= 1) {
+      // Only change code below this line
+      let obj  = [...arr]
+      newArr.push(obj);       
+      // Only change code above this line
+      num--;
+    }
+    return newArr;
+  }
+  
+  console.log(copyMachine([true, false, true], 5));
+
+
+// /Combine Arrays with the Spread Operator
+let thisArray33 = ['sage', 'rosemary', 'parsley', 'thyme'];
+
+let thatArray33 = ['basil', 'cilantro', ...thisArray33, 'coriander'];
+console.log(thisArray33);
+console.log(thatArray33); // ['basil', 'cilantro', 'sage', 'rosemary', 'parsley', 'thyme', 'coriander']
+
+console.clear();
+//   function spreadOut() {
+    let fragment = ['to', 'code'];
+    let sentence =["learning", ...fragment, 'is', 'fun']; // Change this line
+    let sentence3 = sentence;
+    let sentence2 = ['learning', 'to', 'code', 'is', 'fan']
+
+    console.log(sentence3,sentence2);
+    console.log(sentence === sentence2);// false
+
+    // return sentence;
+//   }
+  
+//   console.log(spreadOut());
+
