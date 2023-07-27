@@ -60,3 +60,25 @@ console.clear();
   
   console.log(mixedNumbers(['IV', 5, 'six']));
 
+// Remove Items from an Array with pop() and shift()
+
+let greetings = ['whats up?', 'hello', 'see ya!'];
+greetings.pop()
+console.log(greetings);
+greetings.shift();
+
+console.log(greetings);
+
+
+console.clear()
+
+
+function popShift(arr) {
+    let popped = arr.pop(); // Change this line
+    let shifted = arr.shift(); // Change this line
+    return [shifted, popped];
+  }
+  
+  console.log(popShift(['challenge', 'is', 'not', 'complete']));
+
+  // Remove Items Using splice()
