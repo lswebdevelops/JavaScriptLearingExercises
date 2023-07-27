@@ -134,8 +134,24 @@ console.log(letters)// ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', '
   console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurquoise', 'FireBrick']));
   
   
+  
+  //   Copy Array Items Using slice()
+  
+  
+  let weatherConditions = ['rain', 'snow', 'sleet', 'hail', 'clear'];
+  
+  let todaysWeather = weatherConditions.slice(1,3);
+  console.log(weatherConditions);
+  console.log(todaysWeather);
+  
   console.clear();
 
-
-
- 
+let fCast = ['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']
+ function forecast(arr) {
+    // Only change code below this line
+    arr = arr.slice(2,4)
+    return arr;
+  }
+  
+  // Only change code above this line
+  console.log(forecast(fCast));
