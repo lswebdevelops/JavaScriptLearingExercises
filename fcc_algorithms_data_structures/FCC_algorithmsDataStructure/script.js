@@ -175,7 +175,7 @@ function forecast(arr) {
 console.log(forecast(fCast));
 
 // */*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/
-// Copy an Array with the Spread Operator 
+// Copy an Array with the Spread Operator
 
 let thisArray = [true, true, undefined, false, null];
 let thatArray = [...thisArray];
@@ -183,66 +183,142 @@ let myArray = thisArray;
 console.log(typeof thatArray); //object
 console.log(typeof myArray); //object
 
-
-
-
 function copyMachine(arr, num) {
-    let newArr = [];
-    while (num >= 1) {
-      // Only change code below this line
-      let obj  = [...arr]
-      newArr.push(obj);       
-      // Only change code above this line
-      num--;
-    }
-    return newArr;
+  let newArr = [];
+  while (num >= 1) {
+    // Only change code below this line
+    let obj = [...arr];
+    newArr.push(obj);
+    // Only change code above this line
+    num--;
   }
-  
-  console.log(copyMachine([true, false, true], 5));
+  return newArr;
+}
 
+console.log(copyMachine([true, false, true], 5));
 
 // /Combine Arrays with the Spread Operator
-let thisArray33 = ['sage', 'rosemary', 'parsley', 'thyme'];
+let thisArray33 = ["sage", "rosemary", "parsley", "thyme"];
 
-let thatArray33 = ['basil', 'cilantro', ...thisArray33, 'coriander'];
+let thatArray33 = ["basil", "cilantro", ...thisArray33, "coriander"];
 console.log(thisArray33);
 console.log(thatArray33); // ['basil', 'cilantro', 'sage', 'rosemary', 'parsley', 'thyme', 'coriander']
 
 console.clear();
 //   function spreadOut() {
-    let fragment = ['to', 'code'];
-    let sentence =["learning", ...fragment, 'is', 'fun']; // Change this line
-    
-    let sentence2 = ['learning', 'to', 'code', 'is', 'fun']
+let fragment = ["to", "code"];
+let sentence = ["learning", ...fragment, "is", "fun"]; // Change this line
 
-    console.log(sentence,sentence2);
-    console.log(sentence === sentence2);// false
+let sentence2 = ["learning", "to", "code", "is", "fun"];
 
-    // return sentence;
+console.log(sentence, sentence2);
+console.log(sentence === sentence2); // false
+
+// return sentence;
 //   }
-  
+
 //   console.log(spreadOut());
 
-
-
-
 // Check For The Presence of an Element With indexOf()
-let fruits = ['apples', 'pears', 'oranges', 'peaches', 'pears'];
+let fruits = ["apples", "pears", "oranges", "peaches", "pears"];
 // indexOf('dates') returns -1, indexOf('oranges') returns 2, and indexOf('pears') returns 1 (the first index at which each element exists).
-console.log(fruits.indexOf('dates'));;// -1
-console.log(fruits.indexOf('oranges'));;
-console.log(fruits.indexOf('pears'));;
+console.log(fruits.indexOf("dates")); // -1
+console.log(fruits.indexOf("oranges"));
+console.log(fruits.indexOf("pears"));
 
-fruits[5] = "bananas"
-console.log(fruits.indexOf("bananas"));;
+fruits[5] = "bananas";
+console.log(fruits.indexOf("bananas"));
 console.log(fruits); // (6) ['apples', 'pears', 'oranges', 'peaches', 'pears', 'bananas']
+
+function quickCheck(arr, elem) {
+  // Only change code below this line
+  return arr.indexOf(elem) != -1;
+  // Only change code above this line
+}
+
+console.log(quickCheck(["squash", "onions", "shallots"], "mushrooms"));
 
 console.clear();
 
-function quickCheck(arr, elem) {
-    // Only change code below this line
-    return arr.indexOf(elem) != -1;
-    // Only change code above this line
+function greaterThanTen(arr, elem) {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > elem) {
+      newArr.push(arr[i]);
+    }
   }
-  
-  console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
+  console.log(newArr); // 12, 14, 80
+}
+
+greaterThanTen([2, 12, 8, 14, 80, 0, 1], 10);
+
+//// *///////////////
+
+fruits = ["apples", "pears", "oranges", "peaches", "pears"];
+console.log(fruits.indexOf("grapes")); // -1
+fruits.push("grapes");
+console.log(fruits); //  ['apples', 'pears', 'oranges', 'peaches', 'pears', 'grapes']
+console.log(fruits.indexOf("grapes")); // 5
+console.log(fruits.indexOf("oranges"));
+console.log(fruits.indexOf("pears"));
+console.log(fruits.indexOf("peaches"));
+
+function quickCheck2(arr, elem) {
+  // Only change code below this line
+  if (arr.indexOf(elem) == "-1") {
+    return false;
+  } else {
+    return true;
+  }
+}
+// Only change code above this line
+
+console.log(quickCheck2(["squash", "onions", "shallots"], "mushrooms"));
+
+// Iterate Through All an Array's Items Using For Loops
+
+function greaterThanTen(arr) {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 10) {
+      newArr.push(arr[i]);
+    }
+  }
+  console.log(newArr);;
+}
+
+greaterThanTen([2, 12, 8, 14, 80, 0, 1]); //  [12, 14, 80]
+
+function lessThanTen(arr) {
+  let newArr = [];
+  for (let i =0; i < arr.length; i++) {
+    if(arr[i] < 10) {
+      newArr.push(arr[i])
+    }
+  }
+  console.log(newArr);
+}
+
+lessThanTen([2, 12, 8, 14, 80, 0, 1]); // [2, 8, 0, 1]
+
+
+console.clear();
+
+
+function filteredArray(arr, elem) {
+  let newArr = [];
+  // Only change code below this line
+  for(let i= 0; i <arr.length; i ++){
+    if(arr[i].indexOf(elem) == -1){     
+      newArr.push(arr[i]);    
+  }
+}
+  // Only change code above this line
+  return newArr;
+}
+
+console.log(filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 2)); // []
+console.log(filteredArray([[10, 8, 3], [14, 6, 23], [3, 18, 6]], 18)) // [ [ 10, 8, 3 ], [ 14, 6, 23 ] ];
+console.log(filteredArray([["trumpets", 2], ["flutes", 4], ["saxophones", 2]], 2));// [ [ 'flutes', 4 ] ]
+console.log(filteredArray([["amy", "beth", "sam"], ["dave", "sean", "peter"]], "peter")); // [ [ 'amy', 'beth', 'sam' ] ]
+console.log(filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3)); // []
